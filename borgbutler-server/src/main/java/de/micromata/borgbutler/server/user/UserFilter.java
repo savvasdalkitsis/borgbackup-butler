@@ -22,18 +22,18 @@ public class UserFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         String remoteAddr = request.getRemoteAddr();
-        if (remoteAddr == null || !remoteAddr.equals("127.0.0.1")) {
-            log.warn("****************************************");
-            log.warn("***********                   **********");
-            log.warn("*********** SECURITY WARNING! **********");
-            log.warn("***********                   **********");
-            log.warn("*********** Externa access:   **********");
-            log.warn("*********** " + remoteAddr + " **********");
-            log.warn("***********                   **********");
-            log.warn("****************************************");
-            log.warn("Only access from local host yet supported due to security reasons.");
-            throw new RuntimeException("Server is only available for localhost due to security reasons. A remote access is not yet available.");
-        }
+        //if (remoteAddr == null || !remoteAddr.equals("127.0.0.1")) {
+        //    log.warn("****************************************");
+        //    log.warn("***********                   **********");
+        //    log.warn("*********** SECURITY WARNING! **********");
+        //    log.warn("***********                   **********");
+        //    log.warn("*********** Externa access:   **********");
+        //    log.warn("*********** " + remoteAddr + " **********");
+        //    log.warn("***********                   **********");
+        //    log.warn("****************************************");
+        //    log.warn("Only access from local host yet supported due to security reasons.");
+        //    throw new RuntimeException("Server is only available for localhost due to security reasons. A remote access is not yet available.");
+        //}
         try {
             UserData userData = UserUtils.getUser();
             if (userData != null) {
