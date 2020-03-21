@@ -30,7 +30,7 @@ import java.util.EnumSet;
 
 public class JettyServer {
     private Logger log = LoggerFactory.getLogger(JettyServer.class);
-    private static final String HOST = "127.0.0.1";
+    private static final String HOST = "0.0.0.0";
     private static final int MAX_PORT_NUMBER = 65535;
     private Server server;
     private int port;
